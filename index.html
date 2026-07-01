@@ -8,6 +8,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --color-text-primary: #3B2210;
+      --color-text-secondary: #5C3A28;
+      --color-text-muted: #7A5A40;
+      --color-bg: #FAF3EA;
+      --color-bg-alt: #FFFFFF;
+      --color-accent: #B87850;
+      --color-accent-hover: #9E6540;
+      --color-border: #E5D4BE;
+      --color-logo: #8B5E3C;
+      --color-underline: #C49468;
+      --color-header-bg: rgba(250, 243, 234, 0.95);
+      --color-gradient-start: #F0E0D0;
+      --color-gradient-mid: #E8D5BE;
+      --color-gradient-end: #DFCBB0;
+      --color-footer-bg: #3B2210;
+      --color-footer-text: #EDE0D4;
+      --color-footer-brand: #F5E6D3;
+      --color-footer-tagline: #D4C5B2;
+      --color-footer-copy: #B8A392;
+      --color-white: #FFFFFF;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -16,8 +39,8 @@
 
     body {
       font-family: 'Quicksand', sans-serif;
-      color: #3D2B1F;
-      background: #FDF8F4;
+      color: var(--color-text-primary);
+      background: var(--color-bg);
       line-height: 1.6;
     }
 
@@ -30,10 +53,10 @@
     header {
       position: sticky;
       top: 0;
-      background: rgba(253, 248, 244, 0.95);
+      background: var(--color-header-bg);
       backdrop-filter: blur(8px);
       z-index: 100;
-      border-bottom: 1px solid #EDE0D4;
+      border-bottom: 1px solid var(--color-border);
     }
 
     nav {
@@ -48,7 +71,7 @@
     .logo {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #8B5E3C;
+      color: var(--color-logo);
       letter-spacing: 1px;
     }
 
@@ -60,14 +83,14 @@
 
     .nav-links a {
       text-decoration: none;
-      color: #5C4033;
+      color: var(--color-text-secondary);
       font-weight: 500;
       font-size: 1rem;
       transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: #C67B4E;
+      color: var(--color-accent);
     }
 
     .hero {
@@ -76,29 +99,29 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #F5E6D3 0%, #EDE0D4 50%, #E8D5C4 100%);
+      background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-mid) 50%, var(--color-gradient-end) 100%);
       padding: 40px 24px;
     }
 
     .hero-content h1 {
       font-size: 3rem;
       font-weight: 600;
-      color: #3D2B1F;
+      color: var(--color-text-primary);
       margin-bottom: 16px;
       line-height: 1.2;
     }
 
     .hero-content p {
       font-size: 1.2rem;
-      color: #6B4F3A;
+      color: var(--color-text-muted);
       margin-bottom: 32px;
     }
 
     .btn {
       display: inline-block;
       padding: 14px 36px;
-      background: #C67B4E;
-      color: #fff;
+      background: var(--color-accent);
+      color: var(--color-white);
       text-decoration: none;
       border-radius: 30px;
       font-weight: 600;
@@ -110,19 +133,19 @@
     }
 
     .btn:hover {
-      background: #B06A3F;
+      background: var(--color-accent-hover);
     }
 
     .about {
       padding: 80px 0;
-      background: #fff;
+      background: var(--color-bg-alt);
     }
 
     .about h2 {
       text-align: center;
       font-size: 2.2rem;
       font-weight: 600;
-      color: #3D2B1F;
+      color: var(--color-text-primary);
       margin-bottom: 48px;
     }
 
@@ -131,7 +154,7 @@
       display: block;
       width: 60px;
       height: 3px;
-      background: #8CA87C;
+      background: var(--color-underline);
       margin: 12px auto 0;
       border-radius: 2px;
     }
@@ -148,7 +171,7 @@
 
     .about-text p {
       margin-bottom: 16px;
-      color: #5C4033;
+      color: var(--color-text-secondary);
       font-size: 1.05rem;
     }
 
@@ -164,14 +187,14 @@
 
     .contact {
       padding: 80px 0;
-      background: #FDF8F4;
+      background: var(--color-bg);
     }
 
     .contact h2 {
       text-align: center;
       font-size: 2.2rem;
       font-weight: 600;
-      color: #3D2B1F;
+      color: var(--color-text-primary);
       margin-bottom: 16px;
     }
 
@@ -180,14 +203,14 @@
       display: block;
       width: 60px;
       height: 3px;
-      background: #8CA87C;
+      background: var(--color-underline);
       margin: 12px auto 0;
       border-radius: 2px;
     }
 
     .contact > .container > p {
       text-align: center;
-      color: #6B4F3A;
+      color: var(--color-text-muted);
       margin-bottom: 40px;
       font-size: 1.05rem;
     }
@@ -203,19 +226,19 @@
     #contact-form input,
     #contact-form textarea {
       padding: 14px 18px;
-      border: 1px solid #EDE0D4;
+      border: 1px solid var(--color-border);
       border-radius: 12px;
       font-size: 1rem;
       font-family: 'Quicksand', sans-serif;
-      background: #fff;
-      color: #3D2B1F;
+      background: var(--color-white);
+      color: var(--color-text-primary);
       outline: none;
       transition: border-color 0.2s;
     }
 
     #contact-form input:focus,
     #contact-form textarea:focus {
-      border-color: #C67B4E;
+      border-color: var(--color-accent);
     }
 
     #contact-form textarea {
@@ -228,8 +251,8 @@
     }
 
     footer {
-      background: #3D2B1F;
-      color: #EDE0D4;
+      background: var(--color-footer-bg);
+      color: var(--color-footer-text);
       padding: 40px 0;
       text-align: center;
     }
@@ -237,19 +260,19 @@
     .footer-brand {
       font-size: 1.3rem;
       font-weight: 700;
-      color: #F5E6D3;
+      color: var(--color-footer-brand);
       margin-bottom: 8px;
     }
 
     .footer-tagline {
-      color: #D4C5B2;
+      color: var(--color-footer-tagline);
       margin-bottom: 16px;
       font-size: 0.95rem;
     }
 
     .footer-copy {
       font-size: 0.85rem;
-      color: #B8A392;
+      color: var(--color-footer-copy);
     }
 
     @media (max-width: 768px) {
